@@ -449,6 +449,9 @@
     .header{
         display: block;
     }
+    .preview{
+        padding-bottom: 20%;
+    }
     .logo-list {
         width: 80%;
     }
