@@ -77,23 +77,27 @@ document.querySelector(".load_button").onclick = function(){
 let display = function() {
     for (let i=offset; i<offset+6; i++){
         let el = newsArray[i];     
-        let newImg = document.createElement('div');
+        let addDiv = document.createElement('div');
         let newLi = document.createElement('li');
         let newName = document.createElement('h2');
         let newText = document.createElement('p');
+        let read = document.querySelector(".news_content_read");
+        let newRead = read.cloneNode(true);
 
-        newImg.className = "list-img";
-        newLi.className = "list";
+        addDiv.className = "item-img";
+        newLi.className = "item";
         newName.className = "new-title";
         newText.className = "new-body";
 
-        newLi.append(newImg, newName, newText);
+        addDiv.append(newName, newText, newRead);
+        newLi.append(addDiv);
 
         function getRandomInt(max) {
             return Math.floor(Math.random() * Math.floor(max));
         }
 
-        newImg.innerHTML = "<img src='https://i.picsum.photos/id/" +  getRandomInt(1000) + "/432/288.jpg'>";
+       //newImg.innerHTML = "<img src='https://i.picsum.photos/id/" +  getRandomInt(1000) + "/432/288.jpg'>";
+       newLi.style.background = "url('https://i.picsum.photos/id/" +  getRandomInt(1000) + "/432/288.jpg') top center no-repeat"; 
         newName.innerHTML = el.title;
         newText.innerHTML = el.body;
 

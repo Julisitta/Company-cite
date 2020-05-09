@@ -50,7 +50,6 @@
 
 .nav_list a:hover{
     color: #ff99e0;
-    font-size: 17px;
     transition-duration: .3s;
 }
 
@@ -167,18 +166,58 @@
     flex-wrap: wrap;
 }
 
-.news_content li{
+
+.news_content li {
     font-family: 'Museo Sans Cyrl 500', Helvetica, sans-serif;
-    width: 30%;
-    margin-right: 2%;
+    width: 100%;
+    max-width: 432px;
+    padding-bottom: 2%;
+    height: 550px;
 }
 
-.news_content img {
-    width: 100%;
+.first-li {
+background: url(../img/cropped-priroda.png) top center no-repeat;
 }
+
+.second-li {
+    background: url(../img/priroda_gory.png) top center no-repeat;
+}
+
+.third-li {
+    background: url(../img/Unknown.png) top center no-repeat;
+}
+
+.forth-li {
+    background: url(../img/Unknown-1.png) top center no-repeat;
+}
+
+.fifth-li {
+    background: url(../img/trava_priroda.png) top center no-repeat;
+}
+
+.six-li {
+    background: url(../img/cropped-priroda.png) top center no-repeat;
+}
+
+.news_content li .div-wrapper, .item-img {
+    margin-top: 288px;
+    background: rgb(255, 255, 255);
+}
+    
+ .news_content li:hover .div-wrapper {
+    transition-duration: .3s;
+    margin-top: 238px;
+    width: 90%;
+    }
+
+    .item:hover .item-img {
+        transition-duration: .3s;
+        margin-top: 238px;
+        width: 90%;
+        }
 
 .news_content p{
-    padding-top: 2%;
+    padding-top: 7%;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -191,6 +230,33 @@
     line-height: 30px;
 }
 
+.news_content li:hover .news_content_read{
+    opacity: 100;
+    margin-top: 10%;
+}
+
+
+
+.news_content_read {
+    opacity: 0;
+    display: flex;
+}
+
+.news_content_read img{
+    width: 15px;
+    height: 11px;
+}
+
+.news_content_read p{
+    padding: 0;
+    margin-left: 2%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
 .news_content h2:first-letter {
     text-transform: uppercase;
 }
@@ -198,18 +264,6 @@
 .news_content p:first-letter {
     text-transform: uppercase;
 }
-
-.news_content h2:hover ~ p, .news_content h2:hover{
-    position: relative;
-    background-color: #ffffff;
-    top: -10%;
-}
-
-.news_content h2:hover ~ .news_content_read{
-    opacity: 100;
-}
-
-
 .news_button{
     text-align: center;
     margin-top: 7%;
@@ -229,26 +283,7 @@
     border: 2px solid #ffffff
 }
 
-.news_content_read {
-    position: relative;
-    top: -7%;
-    opacity: 0;
-}
 
-.news_content_read img{
-    width: 15px;
-    height: 11px;
-}
-
-.news_content_read p{
-    padding-left: 2%;
-    padding-top: 0;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 10px;
-    width: 100%;
-    text-transform: uppercase;
-}
 
 .slider-body{
     width: 1920px;
@@ -318,7 +353,7 @@
 }
 
 .vacancies_content li:hover{
-    border: 2px solid #cccccc
+    border: 2px solid transparent
 }
 
 .vacancies_content p{
@@ -373,13 +408,10 @@
     background-image: url(../img/Layer2.png);
     background-repeat: no-repeat;
     text-align: center;
+    padding-top: 7%;
 }
 
-.footer_text {
-  padding-top: 7%;
-}
-
-.footer_text p{
+.footer p{
     color: #ffffff;
     font-family: "Museo Sans Cyrl 500";
     font-size: 18px;
@@ -388,12 +420,12 @@
     margin: 1% 0;
 }
 
-.footer_text h1{
+.footer h1{
     color: #ffffff;
     font-family: "Museo Sans Cyrl 500";
     font-size: 44px;
     font-weight: 400;
-    line-height: 25.21px;
+    line-height: 1.2px;
     text-transform: uppercase;
 }
 
@@ -440,6 +472,9 @@
     .content  {
         width: 960px;
     }
+    .preview{
+        padding-bottom: 20%;
+    }
 }
 
 @media (max-width: 960px) {
@@ -448,9 +483,6 @@
     }
     .header{
         display: block;
-    }
-    .preview{
-        padding-bottom: 20%;
     }
     .logo-list {
         width: 80%;
